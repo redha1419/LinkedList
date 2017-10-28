@@ -80,18 +80,18 @@ public class LinkedList {
 			// find the index and assign the previous node to the node after it
 			// TODO: find a better way
 			
-			Node previousNode = root; 
+			Node previous = root; 
 			Node node = root.next;
 			Node after = node.next;
 			
 			for(int i=0; i<index-1; i++){ //  keep shifting through the linked list until "node" is the index in question
-				previousNode = node;
+				previous = node;
 				node = after;
 				after = after.next;
 			}
 			
 			
-			previousNode.next = after;
+			previous.next = after;
 			this.size--;
 	
 		}
